@@ -1,0 +1,13 @@
+## Variables for OpenID Connect Configuration https://kubernetes.io/docs/admin/authentication/
+## To use OpenID you have to deploy additional an OpenID Provider (e.g Dex, Keycloak, ...)
+
+kube_oidc_auth: true
+kube_oidc_url: "https://dex.ev-k8s.a1ck.io"
+kube_oidc_client_id: "kubelogin"
+kube_oidc_username_claim: "email"
+kube_oidc_groups_claim: "groups"
+
+## Optional settings for OIDC
+# kube_oidc_ca_file: "{{ kube_cert_dir }}/ca.pem"
+# kube_oidc_username_prefix: oidc:
+# kube_oidc_groups_prefix: oidc:
